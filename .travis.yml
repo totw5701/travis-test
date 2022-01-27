@@ -21,14 +21,14 @@ before_deploy:
 
 deploy:
   -provider: s3
-  access_key_id: $AWS_ACCESS_KEY  # Travis repo에 설정한 값.
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: idol-collector-build
-  region: ap-northeast-2
-  skip_cleanup: true
-  acl: private  # zip 파일 접근 private
-  local_dir: deploy  # befroe_deploy에서 생성한 폴더
-  wait-until-deployed: true
+    access_key_id: $AWS_ACCESS_KEY  # Travis repo에 설정한 값.
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: idol-collector-build
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private  # zip 파일 접근 private
+    local_dir: deploy  # befroe_deploy에서 생성한 폴더
+    wait-until-deployed: true
 
 
 
